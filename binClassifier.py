@@ -9,15 +9,15 @@ accs2 = []
 #add column names
 features = []
 
+#add the number of data points you want as a part of the train set for each of the classes
+split1 = 14
+split2 = 15
+
 data1 = pd.read_csv("./Data/class1.csv")
 data2 = pd.read_csv("./Data/class2.csv")
 
 data1 = data1[features]
 data2 = data2[features]
-
-split1 = 14
-split2 = 15
-
 
 for i in range(100):
     data1 = data1.sample(frac=1).reset_index(drop=True)
