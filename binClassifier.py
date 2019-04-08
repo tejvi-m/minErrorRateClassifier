@@ -10,8 +10,8 @@ accs2 = []
 features = []
 
 #add the number of data points you want as a part of the train set for each of the classes
-split1 = 14
-split2 = 15
+split1 = 
+split2 = 
 
 data1 = pd.read_csv("./Data/class1.csv")
 data2 = pd.read_csv("./Data/class2.csv")
