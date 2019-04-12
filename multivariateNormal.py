@@ -2,7 +2,7 @@ import numpy as np
 
 def likelihood(xvec, meanvec, covmat, dims = 7):
     d = xvec - meanvec
-    a = 1 / (((2 * np.pi) ** (dims/2)) * np.linalg.det(covmat))
+    a = 1 / (((2 * np.pi) ** (dims/2)) * (np.linalg.det(covmat)**(1/2)))
     expon = -(1/2) * np.matmul(np.transpose(d), np.matmul(np.linalg.inv(covmat), d))
     expon =  np.exp(expon)
 
